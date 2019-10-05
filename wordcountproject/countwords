@@ -1,0 +1,31 @@
+There are 118 total words.
+There are 71 unique words.
+
+
+importsys
+fileNameToRead=sys.argv[0]
+fileToReadopen(fileNameToRead,"r")
+uniqueWordsToCount{}defaddKeyOrIncrementCount(word):
+	globaluniqueWordsToCount
+	ifwordinuniqueWordsToCount.keys():
+		uniqueWordsToCount[word]+=1
+	else:
+forlinefileToRead:
+	forline.split(""):
+		addKeyOrIncrementCount(word)
+fileToRead.close()
+generateFileName(readFileName):
+"."readFileName:
+		returnreadFileName.split(".")[0]
+	else:readFileName
+generateTotalsLines():
+	totalCount0
+	uniqueCountcountValueuniqueWordsToCount.values():
+		uniqueCount		totalCountcountValue
+	return"Therearetotalwords.\nThereuniquewords.\n\n".format(totalCount,uniqueCount)
+fileNameToWritegenerateFileName(fileNameToRead)
+fileToWriteopen(fileNameToWrite,"w")
+fileToWrite.write(generateTotalsLines())
+fileToWrite.writelines(uniqueWordsToCount)
+fileToWrite.close()
+print("DoneWriting!Checkoutfileat:{}".format(fileToWrite.name))
